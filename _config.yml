@@ -12,7 +12,11 @@ title                    : "TESTE Florian"
 title_separator          : "-"
 name                     : &name "TESTE Florian"
 description              : &description "PhD candidate in applied mathematics"
+<<<<<<< HEAD
 url                      : https://Latortuga96/TesteFlorian.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+=======
+url                      : "https://TesteFlorian.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+>>>>>>> 55c80bf5467bac5952825ae52a405f3153fa783f
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "Latortuga96/TesteFlorian.github.io"
 
