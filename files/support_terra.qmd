@@ -3,7 +3,7 @@ title: "Happy R : package terra"
 author: "Florian Teste & Jérémy Lamouroux"
 format: html
 smooth-scroll: true
-editor: visual
+editor: source
 css: style.css
 code-fold: show
 code-tools: true
