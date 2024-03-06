@@ -2,7 +2,7 @@
 title: "Leveraging satellite data with machine and deep learning techniques for corn yield and price forecasting"
 collection: publications
 permalink: /publication/2024-03-04-leveraging-satellite-data
-excerpt: 'This paper presents the use of satellite data and machine learning for forecasting corn yield and price.'
+excerpt: "Presenting an innovative approach, this study extends previous research by comparing traditional machine learning methods with neural network approaches for forecasting corn yield and price variations in the US, Malawi, and South Africa."
 date: 2024-03-04
 venue: 'TechRxiv'
 paperurl: 'https://doi.org/10.36227/techrxiv.170956991.13661936/v1'

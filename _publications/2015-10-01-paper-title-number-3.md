@@ -2,7 +2,7 @@
 title: "Early Forecasting of Corn Yield and Price Variations Using Satellite Vegetation Products"
 collection: publications
 permalink: /publication/2023-04-17-early-forecasting-corn-yield
-excerpt: 'This paper discusses early forecasting of corn yield and price variations using satellite vegetation products.'
+excerpt: "This paper investigates the feasibility of early forecasting corn yield and price variations using satellite vegetation products, introducing innovative methods for predicting agricultural prices before crop harvest."
 date: 2023-04-17
 venue: 'SSRN'
 paperurl: 'https://doi.org/10.2139/ssrn.4421600'

@@ -2,7 +2,7 @@
 title: "Combining LiDAR Metrics and Sentinel-2 Imagery to Estimate Basal Area and Wood Volume in Complex Forest Environment via Neural Networks"
 collection: publications
 permalink: /publication/2022-05-22-combining-lidar-sentinel2
-excerpt: 'This paper presents a method for estimating basal area and wood volume in complex forest environments using LiDAR and Sentinel-2 imagery.'
+excerpt: "This paper introduces a method for estimating basal area and wood volume in complex forest environments by integrating LiDAR and Sentinel-2 imagery using a novel deep learning-based fusion strategy."
 date: 2022-05-22
 venue: 'IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing'
 paperurl: 'https://doi.org/10.1109/JSTARS.2022.3175609'
