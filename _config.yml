@@ -24,8 +24,7 @@ author:
   avatar           : "bio_photo.png"
   name             : "TESTE Florian"
   pronouns         : # example: "she/her"  
-  bio              : "<div style='text-align: justify'>Currently in the final year of a Ph.D. in mathematics at the University Paris-Saclay. I specialize in developing innovative solutions at the intersection of data science, machine learning, and environmental sciences, with expertise in geospatial analysis, remote sensing, and machine learning.
-                      </div>"
+  bio              : "PhD candidate in Applied Mathematics"
 
   location         : "Paris, France"
   employer         : "Paris-Saclay University"
