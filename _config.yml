@@ -24,7 +24,7 @@ author:
   avatar           : "bio_photo.png"
   name             : "TESTE Florian"
   pronouns         : # example: "she/her"  
-  bio              : "As a PhD candidate in Applied Mathematics, I specialize in developing machine learning approaches to harness the full potential of remote sensing data."
+  bio              : "As a PhD candidate in Applied Mathematics, my main interest lies in using machine learning approaches to harness the full potential of remote sensing data."
 
   location         : "Paris, France"
   employer         : "Paris-Saclay University"
