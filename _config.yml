@@ -139,6 +139,7 @@ analytics:
   provider               :  "custom" # false (default), "google", "google-universal", "google-analytics-4", "custom"
   google:
     tracking_id          :
+  goatcounter            : testeflorian
 
 
 # Reading Files
