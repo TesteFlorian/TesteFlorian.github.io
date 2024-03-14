@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Research"
+title: "Research Interest"
 permalink: /research/
 author_profile: true
 # header:
@@ -9,7 +9,6 @@ author_profile: true
 
 <div style="text-align: justify;">
 
-**Research Interests**
 
 I am passionate about leveraging remote sensing, machine learning, and statistical analysis to address critical challenges in agriculture, food security, and environmental sustainability. My research focuses on the synergy of these fields applied to the biosphere.
 
