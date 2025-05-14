@@ -1,18 +1,11 @@
 # Authors
 
-Name Name:
-  name        : "Name Name"
-  uri         : "http://name.com"
-  email       : "name@name.com"
-  bio         : "This is the first name."
+TESTE Florian:
+  name        : "TESTE Florian"
+  uri         : "https://testeflorian.github.io/"
+  email       : "fteste96@protonmail.com"
+  bio         : "As a Senior Geospatial Machine Learning Scientist with a PhD in Machine Learning and Remote Sensing, my main interest lies in using machine learning approaches to harness the full potential of remote sensing data."
   avatar      : "bio-photo-2.jpg"
-  twitter     : "name"
-  google_plus : "Name"
+  # twitter     : "TESTEFlorian"
+  # google_plus : "TESTEFlorian"
 
-Name2 Name2:
-  name        : "Name2 Name2"
-  email       : "name2@name2.com"
-  bio         : "I ordered what?"
-  avatar      : "bio-photo.jpg"
-  twitter     : "name2"
-  google_plus : "Name"

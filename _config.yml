@@ -11,7 +11,8 @@ locale                   : "en-US"
 title                    : "TESTE Florian"
 title_separator          : "-"
 name                     : &name "TESTE Florian"
-description              : &description "PhD candidate in applied mathematics"
+description              : &description "Senior Geospatial Machine Learning Scientist/ PhD in Machine Learning and Remote Sensing"
+tagline                  : "Senior Geospatial Machine Learning Scientist/ PhD in Machine Learning and Remote Sensing"
 url                      : https://TesteFlorian.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "TesteFlorian/TesteFlorian.github.io"
@@ -21,13 +22,13 @@ repository               : "TesteFlorian/TesteFlorian.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "bio_photo.png"
+  avatar           : "bio_photo.jpg"
   name             : "TESTE Florian"
-  pronouns         : # example: "she/her"  
-  bio              : "As a PhD candidate in Applied Mathematics, my main interest lies in using machine learning approaches to harness the full potential of remote sensing data."
+  pronouns         : # example: "she/her"
+  bio              : "As a Senior Geospatial Machine Learning Scientist with a PhD in Machine Learning and Remote Sensing, my main interest lies in using machine learning approaches to harness the full potential of remote sensing data."
 
   location         : "Paris, France"
-  employer         : "Paris-Saclay University"
+  employer         : "Promethee Earth Intelligence"
   uri              : # URL
   email            : "fteste96@protonmail.com" 
 

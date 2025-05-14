@@ -8,6 +8,6 @@ redirect_from:
 ---
 
 {% include base_path %}
- <embed src="{{ site.baseurl }}/files/CV_2024_English.pdf" width="600" height="700" type='application/pdf'> 
+ <embed src="{{ site.baseurl }}/files/CV_TESTE.pdf" width="600" height="700" type='application/pdf'> 
 
- [Download CV](/files/CV_2024_English.pdf)
+ [Download CV](/files/CV_TESTE.pdf)
