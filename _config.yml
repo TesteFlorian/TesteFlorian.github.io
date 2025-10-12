@@ -8,12 +8,12 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "TESTE Florian"
+title                    : "Florian Teste"
 title_separator          : "-"
-name                     : &name "TESTE Florian"
-description              : &description "Senior Geospatial Machine Learning Scientist/ PhD in Machine Learning and Remote Sensing"
-tagline                  : "Senior Geospatial Machine Learning Scientist/ PhD in Machine Learning and Remote Sensing"
-url                      : https://TesteFlorian.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+name                     : &name "Florian Teste"
+description              : &description "Applied AI Scientist (Ph.D.) delivering geospatial intelligence with foundation models, LLM agents, and probabilistic forecasting."
+tagline                  : "Applied AI Scientist · Geospatial Intelligence (Ph.D.)"
+url                      : https://testeflorian.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "TesteFlorian/TesteFlorian.github.io"
 
@@ -23,13 +23,13 @@ repository               : "TesteFlorian/TesteFlorian.github.io"
 author:
   # Biographic information
   avatar           : "bio_photo.jpg"
-  name             : "TESTE Florian"
+  name             : "Florian Teste"
   pronouns         : # example: "she/her"
-  bio              : "As a Senior Geospatial Machine Learning Scientist with a PhD in Machine Learning and Remote Sensing, my main interest lies in using machine learning approaches to harness the full potential of remote sensing data."
+  bio              : "GeoAI scientist (Ph.D.) applying state-of-the-art vision transformers and LLM agents to fuse satellite, environmental, and analyst signals for forecasting, detection, and decision support."
 
-  location         : "Paris, France"
+  location         : "Marseille, France"
   employer         : "Promethee Earth Intelligence"
-  uri              : # URL
+  uri              :
   email            : "fteste96@protonmail.com" 
 
   # Academic websites
@@ -126,13 +126,17 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  # Open Graph/Twitter default site image
+og_image                 : /images/site-logo.png  # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  type                   : Person
+  name                   : "Florian Teste"
+  links:
+    - https://github.com/TesteFlorian
+    - https://www.linkedin.com/in/testeflorian
+    - https://orcid.org/0000-0002-3139-6680
+    - https://www.researchgate.net/profile/Florian-Teste
 
 
 # Analytics

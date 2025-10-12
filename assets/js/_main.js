@@ -3,28 +3,56 @@
    ========================================================================== */
 
 $(document).ready(function(){
-   // Sticky footer
+  // Sticky footer
   var bumpIt = function() {
       $("body").css("margin-bottom", $(".page__footer").outerHeight(true));
     },
-    didResize = false;
+    scheduleBump = (function() {
+      var scheduled = false;
+      var enqueue =
+        window.requestAnimationFrame ||
+        function(callback) {
+          return window.setTimeout(callback, 16);
+        };
+      return function() {
+        if (scheduled) {
+          return;
+        }
+        scheduled = true;
+        enqueue(function() {
+          scheduled = false;
+          bumpIt();
+        });
+      };
+    })();
 
   bumpIt();
 
-  $(window).resize(function() {
-    didResize = true;
-  });
-  setInterval(function() {
-    if (didResize) {
-      didResize = false;
-      bumpIt();
-    }
-  }, 250);
+  $(window).on("resize", scheduleBump);
   // FitVids init
   $("#main").fitVids();
 
   // init sticky sidebar
   $(".sticky").Stickyfill();
+
+  var $authorWrapper = $(".author__urls-wrapper");
+  var $authorToggle = $authorWrapper.find("button");
+  var $authorList = $authorWrapper.find(".author__urls");
+
+  var setAuthorVisibility = function(expanded) {
+    if ($authorList.length === 0) {
+      return;
+    }
+    var isExpanded = Boolean(expanded);
+    if ($authorToggle.length) {
+      $authorToggle.attr("aria-expanded", isExpanded);
+    }
+    if (isExpanded) {
+      $authorList.attr("aria-hidden", "false").removeAttr("hidden").show();
+    } else {
+      $authorList.attr("aria-hidden", "true").attr("hidden", "hidden").hide();
+    }
+  };
 
   var stickySideBar = function(){
     var show = $(".author__urls-wrapper button").length === 0 ? $(window).width() > 1024 : !$(".author__urls-wrapper button").is(":visible");
@@ -36,11 +64,11 @@ $(document).ready(function(){
       // fix
       Stickyfill.rebuild();
       Stickyfill.init();
-      $(".author__urls").show();
+      setAuthorVisibility(true);
     } else {
       // unfix
       Stickyfill.stop();
-      $(".author__urls").hide();
+      setAuthorVisibility(false);
     }
   };
 
@@ -52,10 +80,15 @@ $(document).ready(function(){
 
   // Follow menu drop down
 
-  $(".author__urls-wrapper button").on("click", function() {
-    $(".author__urls").fadeToggle("fast", function() {});
-    $(".author__urls-wrapper button").toggleClass("open");
-  });
+  if ($authorToggle.length) {
+    setAuthorVisibility(!$authorToggle.is(":visible"));
+
+    $authorToggle.on("click", function() {
+      var expanded = $authorToggle.attr("aria-expanded") === "true";
+      setAuthorVisibility(!expanded);
+      $authorToggle.toggleClass("open", !expanded);
+    });
+  }
 
   // init smooth scroll
   $("a").smoothScroll({offset: -20});

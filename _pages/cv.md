@@ -8,6 +8,9 @@ redirect_from:
 ---
 
 {% include base_path %}
- <embed src="{{ site.baseurl }}/files/CV_TESTE.pdf" width="600" height="700" type='application/pdf'> 
 
- [Download CV](/files/CV_TESTE.pdf)
+<div class="pdf-embed">
+  <embed src="{{ base_path }}/files/CV_TESTE.pdf" type='application/pdf'>
+</div>
+
+[Download CV](/files/CV_TESTE.pdf)

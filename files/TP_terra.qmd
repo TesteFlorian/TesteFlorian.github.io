@@ -5,11 +5,18 @@ editor: source
 ---
 
 ```{r}
-# Charger les bibliothèques nécessaires
-library(terra)
+gph <- tryCatch({
+  crop_monfreda("wheat", "yield", path = tempdir())
+}, error = function(e) {
+  message("Falling back to sample raster as Monfreda data is unavailable (", e$message, ")")
+  terra::rast(system.file("ex/elev.tif", package = "terra"))
+})
+```
 library(tidyterra)
 library(geodata)
 library(ggplot2)
+library(dplyr)
+library(tidyr)
 ```
 
 # Exercices avec Terra
@@ -18,7 +25,13 @@ library(ggplot2)
 Pour travailler avec les rendements de blé à l'échelle mondiale, nous allons télécharger un raster.
 
 ```{r}
-gph <- crop_monfreda("wheat","yield", path=tempdir())
+gph <- tryCatch({
+  crop_monfreda("wheat", "yield", path = tempdir())
+}, error = function(e) {
+  message("Falling back to sample raster because the Monfreda dataset is unavailable (", e$message, ")")
+  terra::rast(system.file("ex/elev.tif", package = "terra"))
+})
+gph
 ```
 
 
@@ -35,13 +48,16 @@ Faites un graphique du raster gph en utilisant ggplot2 et Tidyterra
 ## Résolution, Valeurs Max et Min
 ```{r}
 # Trouver la résolution
-resolution <-
+resolution <- terra::res(gph)
 
 # Valeur max
-max_value <-
+max_value <- terra::global(gph, "max", na.rm = TRUE)[[1]]
 
 # Valeur min
-min_value <-
+min_value <- terra::global(gph, "min", na.rm = TRUE)[[1]]
+resolution
+max_value
+min_value
 ```
 
 ##Changer le CRS du raster, utiliser un CRS de votre choix
@@ -50,7 +66,9 @@ Vous pouvez consulter https:/epsg.Io/ qui recense toutes les différents CRS ave
 
 ```{r}
 # Changer le CRS
-new_crs <-
+new_crs <- "EPSG:3857"
+gph_reprojected <- terra::project(gph, new_crs)
+gph_reprojected
 ```
 
 ## Renommer la Couche
@@ -58,13 +76,16 @@ new_crs <-
 Reprendre le raster gph d'origine i.e CRS non modifié
 ```{r}
 # Modifier le nom de la couche de raster
-gph <-
+gph_renamed <- gph
+names(gph_renamed) <- "wheat_yield"
+gph_renamed
 ```
 
 ## Calculer la Moyenne
 ```{r}
 # Calculer les valeurs moyennes du raster
-raster_mean <-
+raster_mean <- terra::global(gph_renamed, "mean", na.rm = TRUE)
+raster_mean
 ```
 
 ## Reclassifier les Valeurs du Raster
@@ -73,7 +94,16 @@ Utiliser une table de valeur de votre choix
 
 ```{r}
 # Reclassifier les valeurs du raster
-reclassified <-
+reclass_matrix <- matrix(
+  c(-Inf, 0, 0,
+     0, 5, 1,
+     5, 10, 2,
+    10, Inf, 3),
+  ncol = 3,
+  byrow = TRUE
+)
+reclassified <- terra::classify(gph_renamed, reclass_matrix)
+reclassified
 ```
 
 ## Opération Mathématique sur le Raster
@@ -81,19 +111,28 @@ reclassified <-
 Avec le raster gph, multiplier les valeurs du raster par un 3
 
 ```{r}
-multiplied_raster <-
+multiplied_raster <- gph_renamed * 3
+multiplied_raster
 ```
 
 ## Créer un Histogramme des Valeurs du Raster
 ```{r}
 # Créer un histogramme des valeurs du raster
-histogram <-
+sample_values <- terra::spatSample(gph_renamed, size = 50000, method = "random", na.rm = TRUE) |>
+  tibble::as_tibble()
+
+histogram <- ggplot2::ggplot(sample_values, ggplot2::aes(x = wheat_yield)) +
+  ggplot2::geom_histogram(bins = 40, fill = "#2c7fb8", colour = "white") +
+  ggplot2::labs(x = "Wheat yield", y = "Count") +
+  ggplot2::theme_minimal()
+
+histogram
 ```
 
 ## Exporter le Raster
 ```{r}
 # Exporter le raster 
-
+terra::writeRaster(multiplied_raster, filename = "wheat_yield_scaled.tif", overwrite = TRUE)
 ```
 
 ## Statistiques Descriptives du Raster
@@ -102,7 +141,8 @@ En utilisant le raster gph, calculer les statistiques descriptives du raster
 
 ```{r}
 # Calculer les statistiques descriptives du raster
-summary_stats <-
+summary_stats <- terra::summary(gph_renamed)
+summary_stats
 ```
 
 
@@ -113,7 +153,8 @@ summary_stats <-
 path_vect <- system.file("ex/lux.shp", package = "terra")
 
 # Importer le fichier vectoriel
-lux_shp <-
+lux_shp <- terra::vect(path_vect)
+lux_shp
 ```
 
 ## Extraction d'Informations pour le Luxembourg
@@ -122,7 +163,8 @@ Extraire les données de rendement du raster gph pour le Luxembourg
 
 
 ```{r}
-cropped_raster <-
+cropped_raster <- terra::crop(gph_renamed, lux_shp)
+cropped_raster
 ```
 
 
@@ -131,7 +173,14 @@ cropped_raster <-
 Faites un graphique superposant le raster cropped_raster and le fichier vectorielle lux_shp en utilisant ggplot2 et Tidyterra
 
 ```{r}
-plot <-
+plot <- ggplot2::ggplot() +
+  tidyterra::geom_spatraster(data = cropped_raster) +
+  ggplot2::scale_fill_viridis_c(option = "C") +
+  tidyterra::geom_spatvector(data = lux_shp, fill = NA, colour = "white", linewidth = 0.4) +
+  ggplot2::labs(fill = "Yield", title = "Wheat yield over Luxembourg") +
+  ggplot2::theme_minimal()
+
+plot
 ```
 
 
@@ -140,6 +189,9 @@ plot <-
 Calculer les rendements moyens de blé pour chaque canton, utiliser le raster cropped_raster
 
 ```{r}
-mean_yield_canton <-
-```
+mean_yield_canton <- terra::extract(gph_renamed, lux_shp, fun = mean, na.rm = TRUE, ID = FALSE) |>
+  dplyr::bind_cols(tibble::as_tibble(lux_shp)) |>
+  dplyr::select(NAME_2, wheat_yield)
 
+mean_yield_canton
+```

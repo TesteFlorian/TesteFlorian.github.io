@@ -22,7 +22,7 @@
           {% else %}
             "{{ teaser | prepend: "/images/" | prepend: base_path }}"
           {% endif %}
-          alt="">
+          alt="{{ post.header.teaser_alt | default: title }}">
       </div>
     {% endif %}
     <h2 class="archive__item-title" itemprop="headline">
@@ -36,7 +36,26 @@
       <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
     {% if post.date %}<p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {{ post.date | date: '%B %d, %Y' }}</p>{% endif %}
-    {% if post.venue %}<p class="archive__item-excerpt" itemprop="description">{{post.type}}, {{ post.venue }},  {{post.location}} {% endif %}
-    {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>{% endif %}
+    {% if post.type or post.venue or post.location %}
+      <p class="archive__item-excerpt" itemprop="description">
+        {% if post.type %}{{ post.type }}{% endif %}
+        {% if post.venue %}
+          {% if post.type %}, {% endif %}
+          {{ post.venue }}
+        {% endif %}
+        {% if post.location %}
+          {% if post.type or post.venue %}, {% endif %}
+          {{ post.location }}
+        {% endif %}
+      </p>
+    {% endif %}
+    {% if post.excerpt %}
+      <div class="archive__item-excerpt" itemprop="description">
+        {{ post.excerpt | markdownify }}
+      </div>
+    {% endif %}
+    {% if post.slides_url %}
+      <p><a class="btn btn--light-outline" href="{{ post.slides_url | relative_url }}">View resources</a></p>
+    {% endif %}
   </article>
 </div>

@@ -21,8 +21,10 @@
   </div>
 
   <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">Follow</button>
-    <ul class="author__urls social-icons">
+    <button class="btn btn--inverse" type="button" aria-controls="author-contact-links" aria-expanded="false">
+      Follow
+    </button>
+    <ul class="author__urls social-icons" id="author-contact-links" aria-hidden="true">
       <!-- Font Awesome icons / Biographic information  -->
       {% if author.location %}
         <li><i class="fa-solid fa-location-dot icon-pad-right" aria-hidden="true"></i>{{ author.location }}</li>

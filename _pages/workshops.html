@@ -1,0 +1,21 @@
+---
+layout: archive
+title: "Workshops & Notebooks"
+permalink: /workshops/
+author_profile: true
+---
+
+{% include base_path %}
+
+These hands-on sessions include fully rendered notebooks so participants can follow each step asynchronously.
+
+{% assign workshops = site.talks | where_exp: "item", "item.slides_url != nil" | sort: "date" | reverse %}
+
+{% if workshops %}
+### Workshops
+{% for post in workshops %}
+  {% include archive-single-talk.html %}
+{% endfor %}
+{% else %}
+<p>No workshops are published yet. Check back soon.</p>
+{% endif %}

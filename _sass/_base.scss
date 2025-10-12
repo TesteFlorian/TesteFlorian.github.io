@@ -1,6 +1,11 @@
 /* ==========================================================================
    BASE ELEMENTS
    ========================================================================== */
+:root {
+  --accent-color: #{$accent-color};
+  --accent-color-contrast: #ffffff;
+}
+
 html {
   /* sticky footer fix */
   position: relative;
@@ -18,6 +23,26 @@ body {
   &.overflow--hidden {
     /* when primary navigation is visible, the content in the background won't scroll */
     overflow: hidden;
+  }
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-110%);
+  background-color: var(--accent-color);
+  color: var(--accent-color-contrast);
+  padding: 0.75rem 1rem;
+  z-index: 1000;
+  text-decoration: none;
+  border-radius: $border-radius;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:focus,
+  &:focus-visible {
+    transform: translateY(0);
+    box-shadow: 0 0 0 4px rgba($accent-color, 0.2);
   }
 }
 
