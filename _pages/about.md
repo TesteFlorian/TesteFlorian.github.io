@@ -9,7 +9,12 @@ redirect_from:
 
 {% include base_path %}
 
-<section class="home-hero">
+<section class="home-hero glass-surface glass-surface--accent glass-hover">
+  <div class="hero-atmosphere" aria-hidden="true">
+    <span class="hero-atmosphere__orb hero-atmosphere__orb--violet"></span>
+    <span class="hero-atmosphere__orb hero-atmosphere__orb--azure"></span>
+    <span class="hero-atmosphere__orb hero-atmosphere__orb--amber"></span>
+  </div>
   <p class="home-hero__eyebrow">Senior Geospatial Machine Learning Scientist</p>
   <h1 class="home-hero__title">Transforming raw data into actionable intelligence.</h1>
   <p class="home-hero__lead">
@@ -22,22 +27,20 @@ redirect_from:
   </div>
 </section>
 
-<!--
 <section class="home-highlights" aria-label="Recent impact highlights">
-  <article class="home-highlights__card">
+  <article class="home-highlights__card glass-card glass-hover">
     <h2>EO Foundation Models</h2>
     <p>Adapted vision transformers and masked autoencoders for multi-sensor monitoring, boosting illicit-vessel F1 scores to 0.86 with lean fine-tuning.</p>
   </article>
-  <article class="home-highlights__card">
+  <article class="home-highlights__card glass-card glass-hover">
     <h2>Maritime Intelligence</h2>
     <p>Operational pipelines flagging dark-fleet behaviour across 12M km², cutting analyst alert latency from 8 hours to 90 minutes.</p>
   </article>
-  <article class="home-highlights__card">
+  <article class="home-highlights__card glass-card glass-hover">
     <h2>Food Security Forecasting</h2>
     <p>Market-ready crop yield and price forecasts with 20–35% MAE gains over USDA baselines months ahead of harvest.</p>
   </article>
 </section>
--->
 
 ## Professional Experience
 
