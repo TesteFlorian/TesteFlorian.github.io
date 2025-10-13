@@ -25,7 +25,7 @@ author:
   avatar           : "bio_photo.jpg"
   name             : "Florian Teste"
   pronouns         : # example: "she/her"
-  bio              : "GeoAI scientist (Ph.D.) applying state-of-the-art vision transformers and LLM agents to fuse satellite, environmental, and analyst signals for forecasting, detection, and decision support."
+  bio              : "GeoAI scientist (Ph.D.) specializing in vision transformers and LLM-powered agents that integrate satellite imagery, environmental data, and analyst insights for predictive modeling."
 
   location         : "Marseille, France"
   employer         : "Promethee Earth Intelligence"

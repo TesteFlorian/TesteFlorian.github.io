@@ -27,21 +27,6 @@ redirect_from:
   </div>
 </section>
 
-<section class="home-highlights" aria-label="Recent impact highlights">
-  <article class="home-highlights__card glass-card glass-hover">
-    <h2>EO Foundation Models</h2>
-    <p>Adapted vision transformers and masked autoencoders for multi-sensor monitoring, boosting illicit-vessel F1 scores to 0.86 with lean fine-tuning.</p>
-  </article>
-  <article class="home-highlights__card glass-card glass-hover">
-    <h2>Maritime Intelligence</h2>
-    <p>Operational pipelines flagging dark-fleet behaviour across 12M km², cutting analyst alert latency from 8 hours to 90 minutes.</p>
-  </article>
-  <article class="home-highlights__card glass-card glass-hover">
-    <h2>Food Security Forecasting</h2>
-    <p>Market-ready crop yield and price forecasts with 20–35% MAE gains over USDA baselines months ahead of harvest.</p>
-  </article>
-</section>
-
 ## Professional Experience
 
 ### Promethee Earth Intelligence — Senior Geospatial Machine Learning Scientist (2025 – Present)
