@@ -3,6 +3,7 @@ layout: archive
 title: "Talks and presentations"
 permalink: /talks/
 author_profile: true
+description: "Conference talks and presentations on satellite-based forecasting, geospatial intelligence, and applied AI research."
 ---
 
 {% if site.talkmap_link == true %}
@@ -11,7 +12,7 @@ author_profile: true
 
 {% endif %}
 
-I regularly share research on satellite-enabled forecasting, geospatial intelligence, and agentic analytics with scientific and practitioner communities. This page collects conference and invited talks; hands-on workshops with rendered notebooks now live on the dedicated [Workshops]({{ '/workshops/' | relative_url }}) page.
+I regularly share research on satellite-enabled forecasting, geospatial intelligence, and computer vision with scientific and practitioner communities. This page collects conference and invited talks; hands-on workshops with rendered notebooks now live on the dedicated [Workshops]({{ '/workshops/' | relative_url }}) page.
 
 {% assign conferences = site.talks | where_exp: "item", "item.slides_url == nil" | sort: "date" | reverse %}
 

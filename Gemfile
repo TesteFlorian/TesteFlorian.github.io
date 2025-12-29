@@ -45,4 +45,3 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 # Add webrick explicitly for Ruby 3.x
 gem "webrick", "~> 1.8"
 
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]

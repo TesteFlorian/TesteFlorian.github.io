@@ -3,6 +3,7 @@ layout: archive
 title: "Publications"
 permalink: /publications/
 author_profile: true
+description: "Peer-reviewed publications on geospatial intelligence, crop yield forecasting, and satellite-based machine learning by Florian Teste."
 ---
 
 {% include base_path %}

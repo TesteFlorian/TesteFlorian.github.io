@@ -3,6 +3,7 @@ layout: archive
 title: "CV"
 permalink: /cv/
 author_profile: true
+description: "Curriculum vitae of Florian Teste, Ph.D. — Applied AI Scientist specializing in GeoAI, computer vision"
 redirect_from:
   - /resume
 ---

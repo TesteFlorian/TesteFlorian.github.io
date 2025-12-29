@@ -31,10 +31,10 @@ redirect_from:
 
 ### Promethee Earth Intelligence — Senior Geospatial Machine Learning Scientist (2025 – Present)
 - Prototype GEOINT pipelines that blend SAR/optical/LiDAR with EO foundation models for vessel and flood detection.
-- Build analyst-facing LLM + agent workflows (RAG, Model Context Protocol tools) for cross-source intelligence synthesis.
+- Build analyst-facing dashboards and automated reporting pipelines for cross-source intelligence synthesis.
 - Develop near–real time vessel indexing and classification models across multi-sensor imagery, improving maritime situational awareness.
 - Lead incident investigations that fuse imagery, AIS, and text OSINT to surface high-confidence insights.
-- Fine-tune domain LLMs to automate GEOINT reporting and thematic summarisation in production FastAPI services.
+- Build, train, and deploy deep learning models for automated GEOINT analysis.
 
 ### Atos — Data Scientist & Technical Consultant (2022 – 2025)
 - Directed satellite-informed financial forecasting initiatives powered by deep learning and econometric baselines.
@@ -53,17 +53,16 @@ redirect_from:
 ## Research Focus
 
 - **Geospatial intelligence systems:** End-to-end pipelines combining EO foundation backbones, causal inference, and probabilistic calibration to deliver trusted forecasts.
-- **Agentic analytics:** Retrieval-augmented LLM agents with structured tool use for operational analyst support.
+- **Computer vision for remote sensing:** Vision transformers, semantic segmentation, and object detection applied to satellite and aerial imagery.
 - **Food security forecasting:** Early-season crop yield and price prediction using multimodal satellite time series.
 - **Environmental monitoring:** Multi-sensor fusion for flood, forestry, and maritime surveillance.
 
 ## Core Skills
 
-- **Data Science & Statistical Learning:** Experiment design, causal inference, probabilistic modelling, conformal uncertainty.
-- **ML & Foundation Models:** Vision Transformers, masked autoencoding, spatiotemporal transformers, multimodal fusion, PEFT/LoRA.
-- **LLMs & Agents:** Fine-tuning, RAG pipelines, Model Context Protocol tooling, evaluation harnesses, structured outputs.
-- **Geospatial Engineering:** Sentinel/Landsat, SAR/Optical/LiDAR fusion, STAC, GDAL, Rasterio, GeoPandas, xarray/rioxarray.
-- **MLOps & Platforms:** PyTorch, FastAPI, Docker, CI/CD, GPU & DDP training, observability, dataset versioning.
+- **Computer Vision:** Expertise in Vision Transformers (ViT), masked autoencoders, and self-supervised learning; specialized in semantic segmentation and object detection for high-resolution imagery.
+- **GeoAI & Remote Sensing:** Development of foundation models for Earth Observation, spatiotemporal neural architectures, and multi-sensor fusion (Sentinel, SAR, LiDAR) for maritime and agricultural intelligence.
+- **Geospatial:** High-performance processing of multi-terabyte satellite streams using STAC, GDAL, Rasterio, GeoPandas, and xarray/rioxarray.
+- **MLOps & Engineering:** End-to-end delivery using PyTorch, FastAPI, Docker, and CI/CD, including distributed training and production deployment.
 
 ## Selected Publications
 

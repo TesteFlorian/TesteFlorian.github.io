@@ -11,7 +11,7 @@ locale                   : "en-US"
 title                    : "Florian Teste"
 title_separator          : "-"
 name                     : &name "Florian Teste"
-description              : &description "Applied AI Scientist (Ph.D.) delivering geospatial intelligence with foundation models, LLM agents, and probabilistic forecasting."
+description              : &description "Applied AI Scientist (Ph.D.) delivering geospatial intelligence with computer vision, probabilistic neural networks, and satellite-based forecasting."
 tagline                  : "Applied AI Scientist · Geospatial Intelligence (Ph.D.)"
 url                      : https://testeflorian.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -25,7 +25,7 @@ author:
   avatar           : "bio_photo.jpg"
   name             : "Florian Teste"
   pronouns         : # example: "she/her"
-  bio              : "GeoAI scientist (Ph.D.) specializing in vision transformers and LLM-powered agents that integrate satellite imagery, environmental data, and analyst insights for predictive modeling."
+  bio              : "GeoAI scientist (Ph.D.) specializing in vision transformers, and multi-sensor fusion for satellite-based environmental monitoring and crop forecasting."
 
   location         : "Marseille, France"
   employer         : "Promethee Earth Intelligence"
@@ -34,7 +34,7 @@ author:
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : #"https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  googlescholar    : "https://scholar.google.com/citations?hl=fr&user=txSD0IsAAAAJ"
   impactstory      : # URL
   orcid            : "https://orcid.org/0000-0002-3139-6680"
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"

@@ -35,7 +35,7 @@ jobs:  # Build job
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1.4' # Specifying exact version for stability
+          ruby-version: '3.3.5' # Updated to match local environment version
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
           cache-version: 1 # Increment this number if you need to re-download cached gems
       - name: Setup Pages
