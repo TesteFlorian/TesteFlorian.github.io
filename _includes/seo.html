@@ -25,6 +25,34 @@
   {% assign seo_description = seo_description | markdownify | strip_html | strip_newlines | escape_once %}
 {% endif %}
 
+{% if site.og_image %}
+  {% if site.og_image contains "://" %}
+    {% assign default_social_image = site.og_image %}
+  {% elsif site.og_image contains "/" %}
+    {% assign default_social_image = site.og_image | prepend: base_path %}
+  {% else %}
+    {% assign default_social_image = site.og_image | prepend: "/images/" | prepend: base_path %}
+  {% endif %}
+{% endif %}
+
+{% if page.header.image %}
+  {% if page.header.image contains "://" %}
+    {% assign page_social_image = page.header.image %}
+  {% elsif page.header.image contains "/" %}
+    {% assign page_social_image = page.header.image | prepend: base_path %}
+  {% else %}
+    {% assign page_social_image = page.header.image | prepend: "/images/" | prepend: base_path %}
+  {% endif %}
+{% elsif page.header.overlay_image %}
+  {% if page.header.overlay_image contains "://" %}
+    {% assign page_social_image = page.header.overlay_image %}
+  {% elsif page.header.overlay_image contains "/" %}
+    {% assign page_social_image = page.header.overlay_image | prepend: base_path %}
+  {% else %}
+    {% assign page_social_image = page.header.overlay_image | prepend: "/images/" | prepend: base_path %}
+  {% endif %}
+{% endif %}
+
 {% assign seo_author = page.author | default: page.author[0] | default: site.author[0] %}
 {% if seo_author %}
   {% if seo_author.twitter %}
@@ -58,13 +86,13 @@
   <meta name="twitter:description" content="{{ seo_description }}">
   <meta name="twitter:url" content="{{ canonical_url }}">
 
-  {% if page.header.image %}
+  {% if page_social_image %}
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="{% if page.header.image contains "://" %}{{ page.header.image }}{% else %}{{ page.header.image | prepend: "/images/" | prepend: base_path }}{% endif %}">
+    <meta name="twitter:image" content="{{ page_social_image }}">
   {% else %}
     <meta name="twitter:card" content="summary">
-    {% if site.og_image %}
-      <meta name="twitter:image" content="{{ site.og_image | prepend: "/images/" | prepend: base_path }}">
+    {% if default_social_image %}
+      <meta name="twitter:image" content="{{ default_social_image }}">
     {% endif %}
   {% endif %}
 
@@ -83,10 +111,10 @@
   {% endif %}
 {% endif %}
 
-{% if page.header.image %}
-  <meta property="og:image" content="{% if page.header.image contains "://" %}{{ page.header.image }}{% else %}{{ page.header.image | prepend: "/images/" | prepend: base_path }}{% endif %}">
-{% elsif page.header.overlay_image %}
-  <meta property="og:image" content="{% if page.header.overlay_image contains "://" %}{{ page.header.overlay_image }}{% else %}{{ page.header.overlay_image | prepend: "/images/" | prepend: base_path }}{% endif %}">
+{% if page_social_image %}
+  <meta property="og:image" content="{{ page_social_image }}">
+{% elsif default_social_image %}
+  <meta property="og:image" content="{{ default_social_image }}">
 {% endif %}
 
 {% if page.date %}
@@ -101,13 +129,13 @@
   <link rel="next" href="{{ paginator.next_page_path | prepend: seo_url }}">
 {% endif %}
 
-{% if site.og_image %}
+{% if default_social_image %}
   <script type="application/ld+json">
     {
-      "@context": "http://schema.org",
+      "@context": "https://schema.org",
       "@type": "Organization",
       "url": {{ seo_url | jsonify }},
-      "logo": {{ site.og_image | prepend: "/images/" | prepend: base_path | jsonify }}
+      "logo": {{ default_social_image | jsonify }}
     }
   </script>
 {% endif %}
@@ -115,7 +143,7 @@
 {% if site.social %}
   <script type="application/ld+json">
     {
-      "@context" : "http://schema.org",
+      "@context" : "https://schema.org",
       "@type" : "{% if site.social.type %}{{ site.social.type }}{% else %}Person{% endif %}",
       "name" : "{{ site.social.name | default: site.name }}",
       "url" : {{ seo_url | jsonify }},

@@ -32,6 +32,12 @@ jobs:  # Build job
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+      - name: Check for unresolved merge markers
+        run: |
+          if rg -n "^(<<<<<<<|=======|>>>>>>>)" _pages _posts _portfolio _publications _talks _teaching _research _includes _layouts; then
+            echo "Unresolved merge markers found in site source."
+            exit 1
+          fi
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:

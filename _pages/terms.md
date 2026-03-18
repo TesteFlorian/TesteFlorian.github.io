@@ -1,7 +1,7 @@
 ---
 permalink: /terms/
 title: "Terms and Privacy Policy"
-modified: 2016-06-06
+modified: 2026-03-18
 ---
 
 {% include base_path %}
@@ -9,31 +9,38 @@ modified: 2016-06-06
 
 ## Privacy Policy
 
-The privacy of my visitors is extremely important. This Privacy Policy outlines the types of personal information that is received and collected and how it is used.
+This page explains what data is processed when you visit this site and how that data is used.
 
-First and foremost, I will never share your email address or any other personal information to anyone without your direct consent.
+I do not sell personal data, run advertising trackers, or provide a public commenting platform on this website.
 
 ### Log Files
 
-Like many other websites, this site uses log files to help learn about when, from where, and how often traffic flows to this site. The information in these log files include:
+Like most websites, this site may generate basic server-side request logs through the hosting platform and content delivery network. Those logs can include:
 
 * Internet Protocol addresses (IP)
-* Types of browser
-* Internet Service Provider (ISP)
-* Date and time stamp
-* Referring and exit pages
-* Number of clicks
+* Browser and device metadata
+* Date and time of the request
+* Referring pages
+* Requested URLs and response status codes
 
-All of this information is not linked to anything that is personally identifiable.
+These records are used for security, availability, and troubleshooting, not to build personal profiles.
 
-### Cookies and Web Beacons
+### Analytics
 
-When you visit this site "convenience" cookies are stored on your computer when you submit a comment to help you log in faster to [Disqus](http://disqus.com) the next time you leave a comment.
+This site uses [GoatCounter](https://www.goatcounter.com/) for lightweight, privacy-focused traffic analytics. The goal is to understand which pages are useful and how visitors reach the site.
 
-Third-party advertisers may also place and read cookies on your browser and/or use web beacons to collect information. This site has no access or control over these cookies. You should review the respective privacy policies on any and all third-party ad servers for more information regarding their practices and how to opt-out.
+The analytics setup is intended to collect aggregate usage information such as page views, referrers, and basic browser metadata. The site does not use ad-tech beacons or a third-party comment system.
 
-If you wish to disable cookies, you may do so through your web browser options. Instructions for doing so can be found on the specific web browsers' websites.
+If you block analytics scripts in your browser or at the network level, the site should continue to function normally.
 
-#### Google Analytics
+### Cookies
 
-Google Analytics is a web analytics tool I use to help understand how visitors engage with this website. It reports website trends using cookies and web beacons without identifying individual visitors. You can read [Google Analytics Privacy Policy](http://www.google.com/analytics/learn/privacy.html).
+This site does not intentionally set convenience cookies for comments, advertising, or embedded discussion platforms.
+
+### Third-Party Links
+
+Pages on this site link to third-party services such as GitHub, LinkedIn, ORCID, ResearchGate, and external publication pages. Once you leave this site, the privacy practices of those services apply.
+
+### Contact
+
+If you have a privacy-related question, use the contact email published on the site.
