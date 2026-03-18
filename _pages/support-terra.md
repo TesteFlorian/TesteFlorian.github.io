@@ -8,7 +8,20 @@ description: "Reference guide for working with SpatVector and SpatRaster objects
 
 {% include base_path %}
 
+<p class="page-kicker">Hands-on workshop</p>
+
 > This tutorial accompanies the “Happy R: package terra” workshop by Florian Teste & Jérémy Lamouroux. It walks through the essentials of Terra, tidyterra, ggplot2, and dplyr for raster and vector analysis.
+
+<div class="page-actions">
+  <a class="btn btn--accent" href="{{ '/workshops/support_terra.html' | relative_url }}" target="_blank" rel="noopener">Open rendered notebook</a>
+  <a class="btn btn--inverse" href="{{ '/files/support_terra.qmd' | relative_url }}">Download Quarto source</a>
+</div>
+
+## Quick facts
+
+- **Audience:** R users working with raster and vector geospatial data.
+- **Format:** Guided workshop plus reusable Quarto notebook.
+- **Outcome:** Learn how to inspect, transform, visualise, and export `SpatVector` and `SpatRaster` workflows with Terra.
 
 ## Render the notebook
 
@@ -71,5 +84,4 @@ install.packages(c("terra", "tidyterra", "ggplot2", "dplyr"))
    - Export outputs for downstream analysis
 
 The Quarto file includes collapsible code blocks, navigation, and custom styling to help you follow along or reuse snippets in your own projects.
-
 

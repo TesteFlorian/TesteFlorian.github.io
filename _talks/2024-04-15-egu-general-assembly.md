@@ -8,6 +8,8 @@ venue: "EGU General Assembly"
 location: "Vienna, Austria"
 date: 2024-04-15
 talk_type: "Conference Presentation"
+content_type: "talk"
+featured: true
 slides_url: 
 event_url: "https://meetingorganizer.copernicus.org/EGU24"
 ---

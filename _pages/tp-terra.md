@@ -8,7 +8,20 @@ description: "Hands-on worksheet for learning Terra, tidyterra, and geodata in R
 
 {% include base_path %}
 
+<p class="page-kicker">Hands-on workshop</p>
+
 > This workshop runs in English. All code examples assume an R (≥4.2) environment with the packages `terra`, `tidyterra`, `geodata`, and `ggplot2`.
+
+<div class="page-actions">
+  <a class="btn btn--accent" href="{{ '/workshops/TP_terra.html' | relative_url }}" target="_blank" rel="noopener">Open rendered notebook</a>
+  <a class="btn btn--inverse" href="{{ '/files/TP_terra.qmd' | relative_url }}">Download Quarto source</a>
+</div>
+
+## Quick facts
+
+- **Audience:** R users learning Terra through guided spatial exercises.
+- **Format:** Worksheet-style workshop with reproducible Quarto source.
+- **Outcome:** Practice raster import, projection, reclassification, statistics, export, and vector overlays in one end-to-end flow.
 
 ## Render the notebook yourself
 

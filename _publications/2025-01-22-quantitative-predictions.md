@@ -4,6 +4,7 @@ collection: publications
 permalink: /publication/2025-01-22-quantitative-predictions
 excerpt: "Introduces a calibrated forecasting stack that couples satellite-derived GPP embeddings with probabilistic ML to deliver continuous soybean and corn yield and price forecasts."
 date: 2025-01-22
+publication_type: "Preprint"
 venue: "SSRN"
 paperurl: "https://ssrn.com/abstract=5107698"
 citation: "Teste, F., Makowski, D., & Ciais, P. (2025). Quantitative predictions of crop yields and prices from satellite-based machine learning: Applications to soybean and corn. <i>SSRN</i>. https://ssrn.com/abstract=5107698"

@@ -15,16 +15,38 @@ redirect_from:
     <span class="hero-atmosphere__orb hero-atmosphere__orb--azure"></span>
     <span class="hero-atmosphere__orb hero-atmosphere__orb--amber"></span>
   </div>
-  <p class="home-hero__eyebrow">Senior Geospatial Machine Learning Scientist</p>
-  <h1 class="home-hero__title">Transforming raw data into actionable intelligence.</h1>
+  <p class="home-hero__eyebrow">Geospatial AI Scientist · Computer Vision · Earth Observation</p>
+  <h1 class="home-hero__title">Building geospatial AI systems for food security, maritime monitoring, and environmental intelligence.</h1>
   <p class="home-hero__lead">
-    I apply state-of-the-art vision transformers and large language models to massive satellite, sensor, and text streams, turning raw geospatial data into mission-ready intelligence.
+    I design and ship applied machine learning pipelines that turn satellite, sensor, and text data into decision-ready products, from early crop forecasts and market intelligence to multi-sensor maritime and flood analysis.
   </p>
   <div class="home-hero__actions">
-    <a class="btn btn--accent" href="{{ base_path }}/publications/">Explore Publications</a>
+    <a class="btn btn--accent" href="{{ base_path }}/rd-projects/">View Projects</a>
+    <a class="btn btn--inverse" href="{{ base_path }}/publications/">Publications</a>
     <a class="btn btn--inverse" href="{{ base_path }}/cv/">Download CV</a>
     <a class="btn btn--light-outline" href="mailto:{{ site.author.email }}">Contact</a>
   </div>
+</section>
+
+<section class="home-highlights">
+  <article class="home-highlights__card glass-card glass-hover">
+    <p class="home-highlights__eyebrow">For hiring teams</p>
+    <h2>Selected projects</h2>
+    <p>Review applied systems spanning crop forecasting, maritime GEOINT, and environmental monitoring, with links to papers and technical outputs.</p>
+    <p><a class="btn btn--accent" href="{{ base_path }}/rd-projects/">Open Projects</a></p>
+  </article>
+  <article class="home-highlights__card glass-card glass-hover">
+    <p class="home-highlights__eyebrow">For collaborators</p>
+    <h2>Research portfolio</h2>
+    <p>Browse recent journal articles and preprints on satellite forecasting, representation learning, and multi-sensor Earth observation.</p>
+    <p><a class="btn btn--inverse" href="{{ base_path }}/publications/">Browse Publications</a></p>
+  </article>
+  <article class="home-highlights__card glass-card glass-hover">
+    <p class="home-highlights__eyebrow">For technical peers</p>
+    <h2>Talks & workshops</h2>
+    <p>See conference talks, invited presentations, and hands-on notebooks that explain the methods, decisions, and tooling behind the work.</p>
+    <p><a class="btn btn--inverse" href="{{ base_path }}/talks/">See Talks</a></p>
+  </article>
 </section>
 
 ## Professional Experience
@@ -72,9 +94,9 @@ redirect_from:
 {% endfor %}
 - Full list on the [publications]({{ base_path }}/publications/) page.
 
-## Conferences & Workshops
+## Selected Talks
 
-{% assign featured_talks = site.talks | sort: "date" | reverse | slice: 0, 3 %}
+{% assign featured_talks = site.talks | where: "featured", true | sort: "date" | reverse | slice: 0, 3 %}
 {% for talk in featured_talks %}
 - [{{ talk.title }}]({{ talk.url | relative_url }}) — {{ talk.venue }}, {{ talk.location }} ({{ talk.date | date: "%b %Y" }})
 {% endfor %}

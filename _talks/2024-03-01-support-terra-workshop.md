@@ -8,6 +8,7 @@ venue: "Internal workshop"
 location: "Remote"
 date: 2024-03-01
 talk_type: "Workshop"
+content_type: "workshop"
 slides_url: "/workshops/support-terra/"
 link: "/workshops/support-terra/"
 excerpt: >

@@ -4,6 +4,7 @@ collection: publications
 permalink: /publication/2024-08-01-leveraging-satellite-data
 excerpt: "Contrasts classical machine learning with deep neural approaches to forecast corn yield and price changes across the US, Malawi, and South Africa using satellite-derived GPP."
 date: 2024-08-01
+publication_type: "Journal Article"
 venue: "IEEE Transactions on Geoscience and Remote Sensing, 62(1)"
 paperurl: "https://doi.org/10.1109/TGRS.2024.3448205"
 citation: "Teste, F., Gangloff, H., Chen, M., Ciais, P., & Makowski, D. (2024). Leveraging satellite data with machine and deep learning techniques for corn yield and price forecasting. <i>IEEE Transactions on Geoscience and Remote Sensing</i>, 62(1), 1-16. https://doi.org/10.1109/TGRS.2024.3448205"

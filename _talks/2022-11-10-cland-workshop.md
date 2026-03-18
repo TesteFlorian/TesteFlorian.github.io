@@ -8,6 +8,8 @@ venue: "CLAND Workshop"
 location: "Paris-Saclay, France"
 date: 2022-11-10
 talk_type: "Featured Speaker"
+content_type: "talk"
+featured: true
 ---
 
 Explored how open satellite products and machine learning can strengthen commodity market intelligence:

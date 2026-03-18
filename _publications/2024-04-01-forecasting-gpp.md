@@ -4,6 +4,7 @@ collection: publications
 permalink: /publication/2024-04-01-forecasting-gpp
 excerpt: "Evaluates dimension-reduction strategies and machine learning models that rely exclusively on satellite-derived GPP to anticipate agricultural market shifts."
 date: 2024-04-01
+publication_type: "Preprint"
 venue: "SSRN Preprint"
 paperurl: "https://doi.org/10.13140/RG.2.2.31718.23362"
 citation: "Teste, F., Ciais, P., & Makowski, D. (2024). Forecasting crop yield and price variations with machine learning from satellite-derived gross primary production maps. <i>SSRN Preprint</i>. https://doi.org/10.13140/RG.2.2.31718.23362"

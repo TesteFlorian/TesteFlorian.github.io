@@ -8,6 +8,8 @@ venue: "MIA-PS Lab Workshop"
 location: "Palaiseau, France"
 date: 2023-10-05
 talk_type: "Invited Talk"
+content_type: "talk"
+featured: true
 ---
 
 Presented the modelling stack underpinning my crop forecasting research, emphasising:

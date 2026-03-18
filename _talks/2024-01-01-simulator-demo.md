@@ -8,6 +8,7 @@ venue: "Internal Research Panel"
 location: "Remote"
 date: 2024-03-01
 talk_type: "Demonstration"
+content_type: "workshop"
 slides_url: "/simulator/"
 link: "/simulator/"
 excerpt: >

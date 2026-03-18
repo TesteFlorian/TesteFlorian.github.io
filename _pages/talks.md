@@ -2,7 +2,7 @@
 layout: archive
 title: "Talks and presentations"
 permalink: /talks/
-author_profile: true
+author_profile: false
 description: "Conference talks and presentations on satellite-based forecasting, geospatial intelligence, and applied AI research."
 ---
 
@@ -12,13 +12,19 @@ description: "Conference talks and presentations on satellite-based forecasting,
 
 {% endif %}
 
-I regularly share research on satellite-enabled forecasting, geospatial intelligence, and computer vision with scientific and practitioner communities. This page collects conference and invited talks; hands-on workshops with rendered notebooks now live on the dedicated [Workshops]({{ '/workshops/' | relative_url }}) page.
+This page collects conference and invited talks. Hands-on sessions and rendered notebooks are separated onto the dedicated [Workshops]({{ '/workshops/' | relative_url }}) page so talks remain focused on external presentations and invited speaking.
 
-{% assign conferences = site.talks | where_exp: "item", "item.slides_url == nil" | sort: "date" | reverse %}
+{% assign talks = site.talks | where: "content_type", "talk" | sort: "date" | reverse %}
+{% assign current_year = "" %}
 
-{% if conferences %}
+{% if talks %}
 ### Conferences & Talks
-{% for post in conferences %}
+{% for post in talks %}
+  {% capture talk_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+  {% unless talk_year == current_year %}
+#### {{ talk_year }}
+    {% assign current_year = talk_year %}
+  {% endunless %}
   {% include archive-single-talk.html %}
 {% endfor %}
 {% else %}

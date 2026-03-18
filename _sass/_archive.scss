@@ -48,6 +48,45 @@
   }
 }
 
+.archive__item {
+  padding: 1.25rem 1.5rem;
+  border: 1px solid rgba($border-color, 0.85);
+  border-radius: $border-radius;
+  background: rgba(#fff, 0.88);
+  box-shadow: 0 10px 30px -24px rgba(#000, 0.35);
+}
+
+.archive__item-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.archive__badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  background: mix(#fff, $primary-color, 84%);
+  color: $primary-color;
+  font-size: $type-size-7;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.archive__badge--muted {
+  background: mix(#fff, $gray, 90%);
+  color: $gray;
+}
+
+.archive__item-meta {
+  margin: 0 0 0.6rem;
+  color: mix(#fff, $gray, 18%);
+  font-size: $type-size-6;
+}
+
 /* remove border*/
 .page__content {
 
@@ -64,6 +103,13 @@
   & + p {
     text-indent: 0;
   }
+}
+
+.archive__item-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1rem;
 }
 
 .archive__item-teaser {
@@ -90,17 +136,7 @@
    ========================================================================== */
 
 .list__item {
-  @include breakpoint($medium) {
-    padding-right: $right-sidebar-width-narrow;
-  }
-
-  @include breakpoint($large) {
-    padding-right: $right-sidebar-width;
-  }
-
-  @include breakpoint($x-large) {
-    padding-right: $right-sidebar-width-wide;
-  }
+  padding-right: 0;
 
   .page__meta {
     margin: 0 0 4px;
