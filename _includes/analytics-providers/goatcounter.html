@@ -1,2 +1,4 @@
-<script data-goatcounter="https://testeflorian.goatcounter.com/count"
+{% assign goatcounter_code = site.analytics.goatcounter | default: "testeflorian" %}
+<script src="{{ '/assets/js/goatcounter-events.js' | relative_url }}"></script>
+<script data-goatcounter="https://{{ goatcounter_code }}.goatcounter.com/count"
         async src="https://gc.zgo.at/count.js"></script>

@@ -27,9 +27,9 @@ These records are used for security, availability, and troubleshooting, not to b
 
 ### Analytics
 
-This site uses [GoatCounter](https://www.goatcounter.com/) for lightweight, privacy-focused traffic analytics. The goal is to understand which pages are useful and how visitors reach the site.
+This site uses [GoatCounter](https://www.goatcounter.com/) for lightweight, privacy-focused traffic analytics. The goal is to understand which pages are useful, how visitors reach the site, and which research resources are actually being opened.
 
-The analytics setup is intended to collect aggregate usage information such as page views, referrers, and basic browser metadata. The site does not use ad-tech beacons or a third-party comment system.
+The analytics setup is intended to collect aggregate usage information such as page views, referrers, basic browser metadata, and click counts for downloads, outbound links, and email links. The site does not use ad-tech beacons or a third-party comment system.
 
 If you block analytics scripts in your browser or at the network level, the site should continue to function normally.
 
