@@ -45,3 +45,11 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 # Add webrick explicitly for Ruby 3.x
 gem "webrick", "~> 1.8"
 
+# Ruby 3.x compatibility for older Jekyll/GitHub Pages dependency chains.
+gem "rexml", "~> 3.2"
+gem "base64", "~> 0.2"
+gem "bigdecimal", "~> 3.1"
+gem "csv", "~> 3.2"
+gem "logger", "~> 1.6"
+gem "ostruct", "~> 0.6"
+
